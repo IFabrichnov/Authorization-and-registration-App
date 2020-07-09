@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <title>Вход или регистрация</title>
+    <style>
+        body        { padding-top:20px; }
+    </style>
+</head>
+<body>
+<div class="container">
+        <h1></span> Login</h1>
+
+        <!-- возврат ошибок -->
+        <% if (message.length > 0) { %>
+            <div><%= message %></div>
+        <% } %>
+
+        <!-- Логин фаорма -->
+        <form action="/login" method="post">
+                <label>Email</label>
+                <input type="text"  name="email">
+                <label>Password</label>
+                <input type="password"  name="password">
+
+            <button type="submit">Вход</button>
+        </form>
+
+        <hr>
+
+        <p>Нужен новый аккаунт? <a href="/register">Регистрация</a></p>
+        <p>Или <a href="/">Домой</a></p>
+
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход или регистрация</title>
+</head>
+<body>
+<form action="/quotes" method="POST">
+    <input type="text" placeholder="title" name="title">
+    <input type="text" placeholder="description" name="description">
+    <button type="submit">Submit</button>
+
+    <br>
+    <br>
+
+    <h2> Цитаты </h2>
+
+    <ul class="quotes">
+        <% for(var i = 0; i < quotes.length; i++) {%>
+            <li class="quote">
+                <span><%= quotes[i].title %></span>
+                <span><%= quotes[i].description %></span>
+            </li>
+        <% } %>
+    </ul>
+</form>
+
+<br>
+
+<button><a href="/logout" >Выход</a></button>
+</body>
+</html>
