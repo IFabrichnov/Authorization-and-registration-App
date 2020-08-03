@@ -66,7 +66,7 @@ app.listen(PORT, () => console.log(`server started on ${PORT}`));
 ```javascript
 module.exports = {
 "port": 5000,
-"mongoURi": "mongodb+srv://ivan:07980798@cluster0.fixsz.azure.mongodb.net/fullstack?retryWrites=true&w=majority"
+"mongoURi": "mongodb+srv://ivan:@cluster0.fixsz.azure.mongodb.net/fullstack?retryWrites=true&w=majority"
 };
 ```
 
@@ -153,14 +153,6 @@ function isLoggedIn(req, res, next) {
   res.redirect('/');
 }
 ```
-
-Создаём новый массив и делаем его равным массиву **messagesData** с методом **map**. Параметром будет являться каждый объект массива **messagesData**. Назовём его просто - **d**.
-
-```javascript
-let dialogsElement = dialogsData
-    .map(d => <DialogItem name={d.name} id={d.id} />);
-```
-
 
 
 ## Страницы фронтенда (home, login, register, quotes)
